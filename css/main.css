@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-* {
+*, html {
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Custom Variables */
+
+:root {
+    --leading: 2em;
+}
+
+/*  */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -11,6 +19,7 @@ body {
 
 .hero-bg {
     background: #307D99 url('../img/bg.jpg');
+    background-position: 12% 83%;
     color: #FFF;
     text-align: center;
     padding-bottom: 4em;
@@ -100,4 +109,42 @@ input[type=button] {
     border-radius: .5em;
     font-size: 1.3em;
     cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #d77d00;
+}
+
+.authentic {
+    margin: 0;
+}
+
+.right-col {
+    text-align: center;
+    margin: 3em 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+h2::before {
+    content: ' ';
+    position: absolute;
+    width: 8em;
+    background: #00bfff77;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: var(--leading);
 }
